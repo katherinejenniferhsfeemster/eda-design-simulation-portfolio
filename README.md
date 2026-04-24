@@ -2,6 +2,8 @@
 
 # Electronics Design & Simulation Portfolio
 
+**by Katherine Feemster**
+
 ### Senior Electronics Design & Simulation (EDA) Specialist · KiCad · LibrePCB · Ngspice · Qucs-s
 
 [🌐 **Live portfolio site**](https://katherinejenniferhsfeemster.github.io/eda-design-simulation-portfolio/) · [GitHub repo](https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio)
@@ -99,6 +101,8 @@ Open to remote and contract engagements. This repository is the living portfolio
 ---
 
 ## Contact
+
+**Katherine Feemster**
 
 - GitHub — [@katherinejenniferhsfeemster](https://github.com/katherinejenniferhsfeemster)
 - Live site — [katherinejenniferhsfeemster.github.io/eda-design-simulation-portfolio](https://katherinejenniferhsfeemster.github.io/eda-design-simulation-portfolio/)
