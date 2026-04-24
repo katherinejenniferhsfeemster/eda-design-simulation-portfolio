@@ -1,0 +1,51 @@
+{
+  "board": {
+    "3dviewports": [],
+    "design_settings": {
+      "defaults": {}
+    }
+  },
+  "boards": [],
+  "cvpcb": {
+    "equivalence_files": []
+  },
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "meta": {
+    "filename": "sensor_frontend.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "name": "Default",
+        "clearance": 0.2,
+        "track_width": 0.25,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
+      }
+    ]
+  },
+  "pcbnew": {
+    "last_paths": {
+      "netlist": "sensor_frontend.net"
+    }
+  },
+  "schematic": {
+    "annotate_start_num": 0,
+    "legacy_lib_list": []
+  },
+  "sheets": [
+    [
+      "ccd0c2dd-0a45-46cf-95fb-5225bbe97f70",
+      "Root"
+    ]
+  ],
+  "text_variables": {
+    "TITLE": "Sensor Frontend (ECG AFE)",
+    "REV": "R1",
+    "COMPANY": "Katherine Feemster \u00b7 EDA"
+  }
+}

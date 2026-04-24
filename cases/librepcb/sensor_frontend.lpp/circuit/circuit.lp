@@ -1,0 +1,25 @@
+(librepcb_circuit (version "1.0.0")
+  (netclass 0ea4ca7e-93c8-415f-8828-6b43a974358c (name "default"))
+
+  (component c642329e-f6e1-4536-9ec4-440fe19df1a9
+    (name "U1") (value "INA128") (lib_cmp 147578dc-1562-44e6-a4fd-b449b93a384e)
+  )
+  (component 37ab81e2-e08c-42c2-9088-fd3331b2a840
+    (name "U2") (value "OPA2348") (lib_cmp b82fb747-f523-45a7-9890-e5ef28badc8d)
+  )
+  (component 04dc6118-b7b1-4a9f-aa70-15d01be8e863 (name "R1") (value "1M"))
+  (component d91dc172-ec8b-42f8-bcf8-29cff7db5af0 (name "R2") (value "1M"))
+  (component d67fb4ac-0102-449e-918b-3d031af66134 (name "R3") (value "10k"))
+  (component fb664fac-74aa-4869-93c5-a1fc010daf0b (name "C1") (value "100nF"))
+  (component 776c2d92-b6dd-4005-8939-1f2f07e6e0dc (name "C2") (value "15nF"))
+  (component e132dabc-3d38-40d0-b62f-46bac6e6f388 (name "J1") (value "IN"))
+  (component 2b427b72-e206-4b38-a096-f5e9a38ce330 (name "J2") (value "AOUT"))
+
+  (netsignal 9b7e44bf-22f8-462f-8a53-cb167fac81aa (name "GND")       (auto_name false))
+  (netsignal dabd98e4-60f3-49ba-8dce-d31138426bce (name "+3V3")      (auto_name false))
+  (netsignal 35f205ce-9ae4-40bf-a00f-d26fd2b9b622 (name "IN")        (auto_name false))
+  (netsignal e2d8dab1-ba4c-4899-a2ff-9c8df21b81cd (name "V_FILT_HP") (auto_name false))
+  (netsignal 7887c0fe-7766-4a4a-8b10-08f6704c3e05 (name "V_AMP")     (auto_name false))
+  (netsignal bc011076-651d-4d90-917e-bf33f0e363c2 (name "V_FILT_LP") (auto_name false))
+  (netsignal e11c7f7f-7733-46b4-86da-0c063fdd81a9 (name "AOUT")      (auto_name false))
+)

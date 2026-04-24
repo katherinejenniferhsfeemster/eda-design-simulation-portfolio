@@ -1,0 +1,25 @@
+* sensor_frontend - Monte Carlo on LP cutoff
+* Vary R3, C2 with 1% and 5% gaussian tolerance, 100 trials
+
+.param R3val = {gauss(10k, 0.01, 3)}
+.param C2val = {gauss(15n, 0.05, 3)}
+
+C1 in nh 100n
+R1 nh gnd 1Meg
+Bg vamp 0 V = 100*v(nh)
+R3 vamp vlp {R3val}
+C2 vlp gnd {C2val}
+Bo aout 0 V = v(vlp)
+
+Vin in 0 AC 1m
+.control
+  let trials = 100
+  let i = 0
+  dowhile i lt trials
+    ac dec 20 1 100k
+    wrdata mc_$&i.ngdat vdb(aout)
+    reset
+    let i = i + 1
+  end
+.endc
+.end

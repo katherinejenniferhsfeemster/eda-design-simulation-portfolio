@@ -1,0 +1,14 @@
+* sensor_frontend - integrated input-referred noise (0.05 - 150 Hz ECG band)
+.include 'models/opamp.lib'
+
+C1 in nh 100n
+R1 nh gnd 1Meg
+Bg vamp 0 V = 100*v(nh)
+R3 vamp vlp 10k
+C2 vlp gnd 15n
+Bo aout 0 V = v(vlp)
+
+Vin in 0 AC 1m
+.noise v(aout) Vin dec 30 0.05 150
+.print noise inoise_total onoise_total
+.end

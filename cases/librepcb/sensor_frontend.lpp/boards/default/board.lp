@@ -1,0 +1,31 @@
+(librepcb_board (version "1.0.0")
+  (uuid 635475f0-ca67-43f4-96d2-73f1cff9ec4c)
+  (name "default")
+  (design_rules
+    (stopmask_clearance_ratio 0.0)
+    (stopmask_min_clearance 0.1)
+    (stopmask_max_clearance 0.15)
+    (creammask_clearance_ratio 0.1)
+  )
+
+  (outline
+    (vertex (position "0.0mm" "0.0mm"))
+    (vertex (position "50.0mm" "0.0mm"))
+    (vertex (position "50.0mm" "27.5mm"))
+    (vertex (position "0.0mm" "27.5mm"))
+    (vertex (position "0.0mm" "0.0mm"))
+  )
+
+  (device 44f9bcba-9a9c-4801-9433-1f1f597115f6 (component_uuid d08e3201-260c-40d3-9cee-335de8e07dc5) (lib_device 046f4dee-d99c-45a3-b4a2-f7a1afadb2e9)
+    (position "12.0mm" "14.0mm") (rotation "0.0") (mirror false))
+  (device b58fb86c-1bf0-41fc-9345-8100aaa20e3d (component_uuid d8750c58-4c3e-4ca2-94eb-0ca574cc7353) (lib_device 68bca2ec-df62-47e9-b500-eaee6788f0c0)
+    (position "38.0mm" "14.0mm") (rotation "0.0") (mirror false))
+
+  (plane 7c3496b3-4887-4025-8ca5-20ae368ffeb5 (layer "bot_cu") (net 32cf6469-27fd-4417-b673-71ae6de933ee)
+    (vertex (position "1.0mm" "1.0mm"))
+    (vertex (position "49.0mm" "1.0mm"))
+    (vertex (position "49.0mm" "26.5mm"))
+    (vertex (position "1.0mm" "26.5mm"))
+    (vertex (position "1.0mm" "1.0mm"))
+  )
+)

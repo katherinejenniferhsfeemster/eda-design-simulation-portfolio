@@ -1,0 +1,3 @@
+.subckt opamp_ideal  inp inn out  GAIN=100000
+E1  out 0  inp inn  {GAIN}
+.ends

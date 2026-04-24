@@ -1,0 +1,8 @@
+Ref,Value,Description,Footprint,Mfr,Qty
+U1,INA128,Instrumentation amplifier,SOIC-8,Texas Instruments,1
+U2,OPA2348,Rail-to-rail op-amp,SOIC-8,Texas Instruments,1
+"R1,R2",1M 1%,Bias / HP filter resistors,0603,Yageo,2
+R3,10k 1%,LP filter resistor,0603,Yageo,1
+C1,100nF X7R,HP input coupling cap,0603,Murata,1
+C2,15nF C0G,LP filter cap,0603,Murata,1
+"J1,J2",Test point,Sensor input / analog output,TH,Keystone,2

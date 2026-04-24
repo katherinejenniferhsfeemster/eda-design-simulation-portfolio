@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+.idea/
+.vscode/
+*.bak
+*.tmp
+*.log
+# KiCad build artefacts
+*-backups/
+fp-info-cache
+*.kicad_prl
+# LibrePCB user state
+.autosave*
+# Ngspice raw output
+*.raw
+rawspice.raw

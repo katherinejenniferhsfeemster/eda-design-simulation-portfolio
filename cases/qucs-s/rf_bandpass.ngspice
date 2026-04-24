@@ -1,0 +1,23 @@
+* rf_bandpass.ngspice — Qucs-s dual-pi LC band-pass, fc=50 MHz BW=20 MHz
+* Ports: P1 (source, 50 Ω), P2 (load, 50 Ω). Two parallel LC tanks to ground.
+
+Vin p1 0 AC 1 0
+Rs  p1 n1 50
+
+* Shunt tank 1
+L1  n1 0  22nH
+C1  n1 0  470pF
+
+* Series element (coupling)
+Lc  n1 n2 4.7nH
+Cc  n1 n2 100pF
+
+* Shunt tank 2
+L2  n2 0  22nH
+C2  n2 0  470pF
+
+Rl  n2 0  50
+
+.ac dec 30 1meg 500meg
+.print ac v(p1) v(n1) v(n2)
+.end

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Katherine Feemster — Electronics Design &amp; Simulation Specialist</title>
+  <meta name="description" content="Senior EDA portfolio — KiCad, LibrePCB, Ngspice and Qucs-s circuit pipelines generated from Python. Reproducible, code-driven schematic, PCB and SPICE workflows for AI research." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">◐</span>
+      <span>Katherine Feemster</span>
+    </a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#code">Code</a>
+      <a href="#stack">Stack</a>
+      <a href="#about">About</a>
+      <a class="btn btn-outline" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Electronics · KiCad · LibrePCB · Ngspice · Qucs-s</p>
+        <h1>I ship the <span class="accent">circuit pipelines</span> that turn open-source EDA tools into AI-ready datasets.</h1>
+        <p class="lede">
+          A decade across <b>KiCad, LibrePCB, Ngspice and Qucs-s</b>. Every schematic, PCB, SPICE deck and S-parameter sweep in this portfolio is generated from Python — because circuits you can diff in git are circuits you can trust in CI.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio" target="_blank" rel="noopener">Browse the repo</a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <img src="img/kicad_pcb.png" alt="KiCad 2-layer PCB layout of an ECG analog front-end, 50 by 32 millimetres, showing INA128 and OPA2348 footprints, passive filter components, traces on both copper layers, vias, and board outline with mechanical dimensions" />
+        <figcaption>KiCad 8 · 2-layer ECG analog front-end PCB with ground-pour both sides</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="wrap strip-inner">
+      <span>KiCad 8</span>
+      <span>LibrePCB 1.x</span>
+      <span>Ngspice 41</span>
+      <span>Qucs-s 2.x</span>
+      <span>S-expression</span>
+      <span>SPICE</span>
+      <span>Qucs XML</span>
+      <span>Monte-Carlo</span>
+      <span>S-parameters</span>
+      <span>COCO for circuits</span>
+      <span>Python · NumPy · SciPy</span>
+      <span>CI rendering</span>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="wrap">
+      <h2>Selected cases</h2>
+      <p class="section-lede">Four cases, one per tool. Each emits a real native project file — a KiCad S-expression tree, a LibrePCB `.lpp` project, four Ngspice `.cir` decks, and a Qucs-s schematic — plus the deterministic simulation output so the whole portfolio renders without any EDA tool installed.</p>
+
+      <div class="cards">
+
+        <article class="card feature">
+          <div class="card-media">
+            <img src="img/kicad_schematic.png" alt="KiCad schematic of an ECG analog front-end with INA128 instrumentation amplifier, input high-pass filter at 1.6 hertz, output low-pass filter at 1 kilohertz, and OPA2348 unity buffer, drawn on a cream background with teal signal traces" />
+          </div>
+          <div class="card-body">
+            <p class="tag">KiCad 8 · S-expression · .kicad_sch / _pcb</p>
+            <h3>ECG analog front-end</h3>
+            <p>Clinical-grade differential front-end — INA128 instrumentation amp, 1.6 Hz input DC-block, 1.06 kHz anti-alias LPF, OPA2348 buffer, ESD clamps on every patient node. Emitted as a schema-valid KiCad 8 project: <code>.kicad_pro</code> / <code>.kicad_sch</code> / <code>.kicad_pcb</code> + <code>.net</code> netlist + BOM + fab summary JSON with stack-up and drill statistics.</p>
+            <p class="meta">KiCad 8 · 2-layer PCB 50 × 32 mm · hierarchical schematic · fab-ready outputs</p>
+            <a class="link" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio/tree/main/cases/kicad" target="_blank" rel="noopener">Read the case study →</a>
+          </div>
+        </article>
+
+        <article class="card feature reverse">
+          <div class="card-media">
+            <img src="img/ngspice_monte_carlo.png" alt="Monte Carlo Bode plot showing 200 frequency responses of the ECG analog front-end overlaid in translucent teal on a cream background, with the nominal response in amber and plus-minus one sigma band shaded, low corner at 1.6 hertz and high corner at 1 kilohertz" />
+          </div>
+          <div class="card-body">
+            <p class="tag">Ngspice 41 · SPICE · Monte-Carlo</p>
+            <h3>AC / transient / Monte-Carlo / noise</h3>
+            <p>Four SPICE decks that characterise the front-end end-to-end: AC Bode with corner markers, transient step with settling envelope, 200-run Monte-Carlo over component tolerances, and input-referred noise density. The decks run through <code>ngspice -b</code> unchanged; when the binary is absent the pipeline reproduces identical results via SciPy.</p>
+            <p class="meta">Ngspice 41 · 4 decks · 200-run MC · ±3σ yield bounds · noise budget per stage</p>
+            <a class="link" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio/tree/main/cases/ngspice" target="_blank" rel="noopener">Read the case study →</a>
+          </div>
+        </article>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-body">
+              <p class="tag">LibrePCB 1.x · S-expression</p>
+              <h3>Same AFE, portable netlist</h3>
+              <p>The KiCad circuit re-emitted in LibrePCB's native <code>.lpp</code> project tree — project, circuit, boards, library — proving the generator can fan out to two independent FOSS EDA flows from one circuit description.</p>
+              <a class="link" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio/tree/main/cases/librepcb" target="_blank" rel="noopener">Case study →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <p class="tag">Ngspice · AC · Transient</p>
+              <h3>Bode + step response</h3>
+              <p>AC magnitude/phase from 0.1 Hz to 10 kHz with HPF/LPF corners annotated, and a 1 mV differential step response with 0.1 % settling envelope — the two plots you hand a cardiologist to sign off a new AFE revision.</p>
+              <a class="link" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio/tree/main/cases/ngspice" target="_blank" rel="noopener">Case study →</a>
+            </div>
+          </article>
+
+          <article class="card accent-card">
+            <div class="card-body">
+              <p class="tag">Qucs-s 2.x · RF · S-parameters</p>
+              <h3>50 MHz band-pass matching</h3>
+              <p>Dual-π LC band-pass between a 50 Ω source and load, computed analytically via the ABCD chain at 4001 points from 10 MHz to 500 MHz. Smith chart + S21 mag/phase posters, plus the Qucs XML schematic and an Ngspice-driven deck.</p>
+              <a class="link" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio/tree/main/cases/qucs-s" target="_blank" rel="noopener">Case study →</a>
+            </div>
+          </article>
+        </div>
+
+        <article class="card feature">
+          <div class="card-media">
+            <img src="img/qucs_smith.png" alt="Smith chart of S11 parameter from 10 megahertz to 500 megahertz for a dual-pi LC band-pass network, showing a viridis-coloured trajectory that loops through resonance with an amber marker at 50 megahertz fc" />
+          </div>
+          <div class="card-body">
+            <p class="tag">Qucs-s · Smith chart · S11</p>
+            <h3>RF matching network — Smith view</h3>
+            <p>The S11 trajectory on a Smith chart, coloured by frequency with viridis, 4001 samples so the arcs read as smooth circles. The amber marker highlights the 50 MHz centre frequency where the network returns <code>|S11| ≈ 0.43</code> — a textbook band-pass signature.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="code" class="section dark">
+    <div class="wrap">
+      <h2>Code you can actually run</h2>
+      <p class="section-lede">Every artefact on this page is regenerated by GitHub Actions on every push — nothing is pre-baked. Clone the repo, run one script, and get identical schematics, PCB layouts, SPICE decks, CSVs and posters.</p>
+
+      <div class="code-grid">
+        <div class="code-card">
+          <h4>KiCad — ECG analog front-end</h4>
+          <pre><code>python3 src/build_kicad_case.py</code></pre>
+          <p>Writes a schema-valid KiCad 8 project (<code>.kicad_pro</code>, <code>.kicad_sch</code>, <code>.kicad_pcb</code>), the KiCad netlist, a BOM CSV and a fab summary JSON with the full stack-up.</p>
+        </div>
+        <div class="code-card">
+          <h4>LibrePCB — portable netlist</h4>
+          <pre><code>python3 src/build_librepcb_case.py</code></pre>
+          <p>Emits a full LibrePCB <code>.lpp</code> tree — <code>project/</code>, <code>circuit/</code>, <code>boards/default/</code>, flattened <code>library/</code> — that opens unchanged in LibrePCB 1.x.</p>
+        </div>
+        <div class="code-card">
+          <h4>Ngspice — AC / tran / MC / noise</h4>
+          <pre><code>python3 src/build_ngspice_case.py</code></pre>
+          <p>Writes four <code>.cir</code> decks, a generic single-pole op-amp <code>.lib</code>, a <code>run_all.sh</code> driver, and the four characterisation CSVs and posters.</p>
+        </div>
+        <div class="code-card">
+          <h4>Qucs-s — 50 MHz band-pass</h4>
+          <pre><code>python3 src/build_qucs_case.py</code></pre>
+          <p>Writes <code>rf_bandpass.sch</code> (Qucs XML) and <code>rf_bandpass.ngspice</code>, computes S11/S21 from the ABCD chain and renders the Smith chart + S21 mag/phase posters.</p>
+        </div>
+        <div class="code-card">
+          <h4>Shared — art helpers</h4>
+          <pre><code>src/art_helpers.py</code></pre>
+          <p>Palette (<code>#2E7A7B</code> / <code>#D9A441</code>), figure style, schematic and PCB mock-up primitives reused by every case — one set of visual rules across all four tools.</p>
+        </div>
+        <div class="code-card">
+          <h4>Pipeline — one entrypoint</h4>
+          <pre><code>python3 src/run_all.py</code></pre>
+          <p>Runs all four cases sequentially, ~4 seconds end-to-end. Dependencies are <code>numpy</code>, <code>scipy</code> and <code>matplotlib</code> — no EDA tool required to regenerate the portfolio.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 36px;">
+        <figure class="hero-art" style="background: #0F1A1F; padding: 22px;">
+          <img src="img/ngspice_ac_bode.png" alt="Bode plot of the ECG analog front-end showing magnitude in decibels on top and phase in degrees on bottom from 0.1 hertz to 10 kilohertz, with the pass-band flat between 1.6 hertz and 1 kilohertz and amber corner markers" />
+          <figcaption style="color: #B8BFC4;">Ngspice AC analysis — magnitude + phase with HPF and LPF corner markers, reproduced from the <code>ac_bode.cir</code> deck.</figcaption>
+        </figure>
+      </div>
+
+      <div style="margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <figure class="hero-art">
+          <img src="img/ngspice_tran_step.png" alt="Transient step response showing the output of the ECG analog front-end settling to a 1 millivolt differential input step within 20 milliseconds, with a shaded 0.1 percent settling envelope" />
+          <figcaption>Transient step — 1 mV differential input, settling envelope ±0.1 %.</figcaption>
+        </figure>
+        <figure class="hero-art">
+          <img src="img/ngspice_noise.png" alt="Input-referred noise spectral density plot from 1 hertz to 10 kilohertz, with bars showing per-stage contribution from the INA128, resistors and OPA2348 buffer" />
+          <figcaption>Noise budget — input-referred density with per-stage contribution bars.</figcaption>
+        </figure>
+      </div>
+
+      <div style="margin-top: 36px;">
+        <figure class="hero-art">
+          <img src="img/qucs_s21.png" alt="S21 magnitude in decibels and phase in degrees plotted against log frequency from 10 megahertz to 500 megahertz, with a shaded pass-band around 50 megahertz and a sharp roll-off on both sides" />
+          <figcaption>Qucs-s · S21 transmission magnitude and phase with the ±3 dB band shaded.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" class="section">
+    <div class="wrap">
+      <h2>Stack</h2>
+      <div class="stack-grid">
+        <div><h4>KiCad 8</h4><p>S-expression schematic and PCB authoring, hierarchical sheets, ERC/DRC rule sets, BOM generation, stack-up-aware PCB layout, JLCPCB/OSHPark-ready fabrication output.</p></div>
+        <div><h4>LibrePCB 1.x</h4><p>Strict <code>.lpp</code> project layout, flattened project library, s-expression schematic/layout/circuit, native Wayland-friendly headless rendering for containerised CI.</p></div>
+        <div><h4>Ngspice 41</h4><p>Batch SPICE (<code>ngspice -b</code>), AC / DC / TRAN / NOISE / SENS / MC, <code>.meas</code> post-processing, hierarchical sub-circuit libraries, vendor model import from TI and Analog Devices.</p></div>
+        <div><h4>Qucs-s 2.x</h4><p>Qucs XML schematic capture with Ngspice back-end, linear S-parameter sweeps, harmonic-balance for non-linear RF, co-simulation with passive EM models.</p></div>
+        <div><h4>Python · NumPy · SciPy</h4><p>ABCD-matrix S-parameter solver, Monte-Carlo sweep harness, scipy.signal state-space reproduction of SPICE transients, matplotlib poster renderers with a shared palette.</p></div>
+        <div><h4>CI &amp; reproducibility</h4><p>GitHub Actions regenerating every artefact on push, deterministic seeded generators, schema-valid native project files — diff-first, editor-second.</p></div>
+      </div>
+      <figure class="hero-art" style="margin-top: 32px;">
+        <img src="img/librepcb_pcb.png" alt="LibrePCB layout of the same ECG analog front-end circuit, 50 by 32 millimetres, showing footprints, traces, vias and silkscreen on a cream background in the same teal and amber palette" />
+        <figcaption>LibrePCB 1.x · the same circuit re-emitted in a second independent EDA flow.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="wrap about-inner">
+      <div>
+        <h2>About</h2>
+        <p>I'm a senior electronics design &amp; simulation specialist shipping cross-tool circuit pipelines — analog front-ends, mixed-signal boards and RF matching networks — most recently focused on dataset generation and labelling workflows for AI research programs. I care about reproducible artefacts (diff-first, editor-second), native scripting over UI automation, and pipelines that produce the same Gerbers, netlists and S-parameter files a year from now.</p>
+        <p>Open to remote and contract engagements in EDA, circuit characterisation, or research-facing tooling. The repository linked below is the living portfolio companion to my CV.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio" target="_blank" rel="noopener">Portfolio on GitHub</a>
+          <a class="btn btn-ghost" href="https://github.com/katherinejenniferhsfeemster" target="_blank" rel="noopener">@katherinejenniferhsfeemster</a>
+        </div>
+      </div>
+      <aside class="side-card">
+        <h4>At a glance</h4>
+        <ul>
+          <li>Four FOSS EDA tools — KiCad, LibrePCB, Ngspice, Qucs-s</li>
+          <li>KiCad S-expression, Qucs XML, SPICE, Python</li>
+          <li>Every artefact is regenerated in CI</li>
+          <li>1 ECG AFE circuit · 2 PCB layouts · 4 SPICE decks · 1 RF matching network</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <span>© 2026 Katherine Feemster. Built with four FOSS EDA tools and a lot of Python.</span>
+    <a href="https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio" target="_blank" rel="noopener">Source ↗</a>
+  </div>
+</footer>
+
+</body>
+</html>

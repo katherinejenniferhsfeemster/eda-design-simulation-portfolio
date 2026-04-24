@@ -1,0 +1,8 @@
+source,rms_uV
+R1 thermal (1 MΩ),8.5
+INA128 voltage,2.1
+INA128 current × Rs,0.6
+R3 thermal (10 kΩ),0.9
+OPA2348 voltage,1.2
+Flicker (0.05-5 Hz),4.3
+total,9.88736567544662

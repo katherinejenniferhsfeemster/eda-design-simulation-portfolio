@@ -1,0 +1,23 @@
+* sensor_frontend - AC analysis (Bode of signal chain)
+* Reproduces the post-inamp filter cascade (HP 1.6 Hz ... LP 1 kHz)
+
+.include 'models/opamp.lib'
+
+* HP: C1 100n + R1 1M  -> fc = 1.59 Hz
+C1  in  node_hp  100n
+R1  node_hp gnd  1Meg
+
+* Ideal gain x100 block (represents INA128 with Rg = 505 ohm)
+Bgain v_amp 0  V = 100 * v(node_hp)
+
+* LP: R3 10k + C2 15n   -> fc = 1.06 kHz
+R3  v_amp   v_flt_lp 10k
+C2  v_flt_lp gnd  15n
+
+* Output buffer (unity gain)
+Bout aout 0  V = v(v_flt_lp)
+
+Vin in 0 AC 1m
+.ac dec 30 0.1 100k
+.print ac vdb(aout) vp(aout)
+.end

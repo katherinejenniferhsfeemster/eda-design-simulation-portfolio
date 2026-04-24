@@ -1,0 +1,8 @@
+(librepcb_project (version "1.0.0")
+  (name "Sensor Frontend")
+  (author "Katherine Feemster")
+  (version_str "R1")
+  (created "2026-04-24T10:00:00Z")
+  (attribute "DESCRIPTION" (type string) (unit "")
+    (value "ECG-style analog frontend · second layout in LibrePCB"))
+)

@@ -1,0 +1,5 @@
+(librepcb_metadata (version "1.0.0")
+  (uuid 7be60e0a-931f-4489-910e-6dbbdaf55614)
+  (description "Second layout of the sensor frontend netlist in LibrePCB.")
+  (keywords "eda pcb librepcb analog afe")
+)

@@ -1,0 +1,11 @@
+{
+  "board_size_mm": [
+    50.0,
+    27.5
+  ],
+  "layers": 2,
+  "min_trace_mm": 0.2,
+  "min_via_mm": 0.3,
+  "footprints": 9,
+  "nets": 7
+}

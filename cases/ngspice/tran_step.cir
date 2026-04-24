@@ -1,0 +1,15 @@
+* sensor_frontend - transient step (100 uV input step)
+.include 'models/opamp.lib'
+
+Vin in 0 PULSE(0 100u 10m 1u 1u 100m 200m)
+
+C1  in  nh  100n
+R1  nh  gnd 1Meg
+Bg  vamp 0  V = 100*v(nh)
+R3  vamp vlp 10k
+C2  vlp  gnd 15n
+Bo  aout 0  V = v(vlp)
+
+.tran 50u 200m
+.print tran v(aout) v(vamp) v(nh)
+.end
