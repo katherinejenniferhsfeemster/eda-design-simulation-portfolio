@@ -2,6 +2,8 @@
 
 **Katherine Feemster** · Electronics Design & Simulation (EDA) Specialist
 
+[🌐 **Live portfolio site**](https://katherinejenniferhsfeemster.github.io/eda-design-simulation-portfolio/) · [GitHub repo](https://github.com/katherinejenniferhsfeemster/eda-design-simulation-portfolio)
+
 A code-first electronics portfolio for an AI research program. Every artefact —
 schematics, PCB layouts, SPICE decks and S-parameter sweeps — is produced by a
 single reproducible Python pipeline that writes real project files for
